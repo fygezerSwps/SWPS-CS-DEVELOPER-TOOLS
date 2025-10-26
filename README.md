@@ -1,2 +1,2 @@
 # SWPS-CS-DEVELOPER-TOOLS
-SWPS University Computer Sciens - Developer Tools Main Repo
+SWPS University Computer Science - Developer Tools Main Repo
