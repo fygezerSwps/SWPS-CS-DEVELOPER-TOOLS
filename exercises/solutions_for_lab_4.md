@@ -107,3 +107,156 @@ Using `find` search for all files in the `~` folder that have been modified in t
 find ~ -type f -mtime -1
 ```
 
+# EXERCISE 12
+
+Using `find`, find all files that have the word 'mozilla' in their name and are located in subdirectories of the `/usr` directory.
+
+```
+find /usr -type f -name '*mozilla*'
+```
+
+# EXERCISE 13
+
+Using the `find` program, find all directories with the name bin that are located in the `/usr` directory.
+
+```
+find /usr -type d -name bin
+```
+
+# EXERCISE 14
+
+Using the `ls` and `grep` command, display only files with the extension `txt`, which are located in the `/home` folder. Write the result to the file `txt_files.txt`.
+
+```
+ls -1 /home/ | grep '\.txt$' > txt_files.txt
+```
+
+# EXERCISE 15
+
+Display all resources from the `/var/log` folder whose name begins with 'a' and the letter 't' is in the 3rd position.
+
+```
+find /var/log -name 'a?t*'
+```
+
+# EXERCISE 16
+
+Display the first 3 lines of the file from exercise 14
+
+```
+head -n 3 txt_files.txt
+```
+
+# EXERCISE 17
+
+Display on the console the number of words from the file from exercise 14.
+
+```
+wc -w txt_files.txt
+```
+
+# EXERCISE 18
+
+Hide the file `txt_files.txt` using the shell commands you learned.
+
+```
+mv txt_files.txt .txt_files.txt
+```
+
+# EXERCISE 19
+
+Check your own ID and the groups to which you belong.
+
+```
+id 
+groups
+```
+
+# EXERCISE 20
+
+Check who is currently logged into the system.
+
+```
+who
+```
+
+# EXERCISE 21
+
+Review the description of the directory structure - the `man 7 hier` command.
+
+# EXERCISE 22
+
+Display the contents of the `/home` directory.
+
+```
+ls -la /home
+```
+
+# EXERCISE 23
+
+View the contents of the basic directories on the system (e.g. `/dev, /etc, /home, /usr`).
+
+```
+ls /dev /etc /home /usr /var /bin /tmp
+```
+
+> [!What's are these files?]
+> > /dev    = device files 
+> /etc     = System configuration files
+> /home = User home files
+> /usr     = User programs 
+> /var      = Variable datas
+> /bin = Files commands required for the system to function
+> /tmp = Temporary files
+
+# EXERCISE 24
+
+Create directory `cat1` in your home directory.
+
+```
+cd /home/linux
+mkdir cat1
+```
+
+# EXERCISE 25
+
+In the `cat1` directory, create the `cat2/cat3/cat4` directory structure with one command.
+
+```
+cd /home/linux/cat1
+mkdir -p cat2/cat3/cat4
+```
+
+-p = for creating parent directories if they don't exist
+
+# EXERCISE 26
+
+Delete the entire `cat3/cat4` directory structure with one command.
+
+```
+cd /home/linux/cat1/cat2
+rm -r cat3
+```
+
+-r = for remove directories and their contents recursively
+
+# EXERCISE 27
+
+Create two arbitrarily named files with `.txt` and `.c` extensions in your home directory.
+
+```
+cd ~
+touch textfile.txt file.c
+```
+
+# EXERCISE 28
+
+Copy all files from your home directory with `.txt` extensions to the `cat1` directory with one command.
+
+```
+cp ~/*.txt ~/cat1/
+```
+
+# EXERCISE 29
+
+Copy with one command all files from your home directory with `.c` extension to `cat2` directory.
